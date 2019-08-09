@@ -1,0 +1,20 @@
+Este proyecto fue realizado con reactjs + redux y conectado a una base de datos noSQL (FIREBASE)
+
+Dependencias necesarias e instaladas
+redux
+redux-firestore
+react-bootstrap
+react-router
+reactstrap
+react-quill
+react-firestore
+react-redux
+react-render-dom
+react-router-dom
+react-redux-firebase
+firebase
+babel-cli
+babel-loader
+babel-preset-es2015
+babel-preset-stage-2
+webpack
