@@ -1,51 +1,92 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './App.css';
-import Header from './Global/Header/Header';
-import Content from './Global/Content/Content';
-import Footer from './Global/Footer/Footer';
-import items from './data/menu';
-import Login from "./components/Login/Login";
-import Dashboard from './components/Dashboard/Dashboard';
-import Navbar from './components/Dashboard/Navbar';
-import fire from './config/fire';
+import firebase from './Firebase';
 
-class App extends Component{
-  
-  constructor(props){
+class App extends Component {
+  constructor(props) {
     super(props);
-    this.state={
-      user: {}
+    this.ref = firebase.firestore().collection('boards');
+    this.unsubscribe = null;
+    this.state = {
+      boards: []
     };
   }
-componentDidMount(){
-    this.authListener();
-  }
-  authListener(){
-    fire.auth().onAuthStateChanged((user)=>{
-      if(user){
-        this.setState({user});
-      }else{
-        this.setState({user: null});
-      }
+
+  onCollectionUpdate = (querySnapshot) => {
+    const boards = [];
+    querySnapshot.forEach((doc) => {
+      const { title, description,horai,horaf, author } = doc.data();
+      boards.push({
+        key: doc.id,
+        doc, // DocumentSnapshot
+        title,
+        description,
+        horai,
+        horaf,
+        author,
+      });
     });
+    this.setState({
+      boards
+   });
   }
 
-  static propTypes = {
-    children: PropTypes.object.isRequired
-  };
+  componentDidMount() {
+    this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
+  }
 
-  render(){
-    const {children} = this.props;
+  render() {
     return (
-        <div className="App">
-        {this.state.user ? (Navbar):(<Header items={items}/>)}
-        <Content body={this.state.user ? (<Dashboard/>):(children)}/>
-        <Footer/>
+           
+      <div class="container">
+        <div class="panel panel-default">
+        <div class="Menulist">
+            <h3 class="listm">
+              Graficacion y Animacion<br></br>
+              Menu<br></br>
+            </h3>
+          Alumno 
+          Docente
+          Administrador
+            
+          </div>
+
+
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              BOARD LIST
+            </h3>
+          </div>
+          <div class="panel-body">
+            <h4><Link to="/create" class="btn btn-primary">Add Board</Link></h4>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>N° Lab </th>
+                  <th>Materia</th>
+                  <th>Hora inicio</th>
+                  <th>Hora Fin</th>
+                  <th>Nombre Profesor</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.boards.map(board =>
+                  <tr>
+                    <td><Link to={`/show/${board.key}`}>{board.title}</Link></td>
+                    <td>{board.description}</td>
+                    <td>{board.horai}</td>
+                    <td>{board.horaf}</td>
+                    <td>{board.author}</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
-      );
+      </div>
+    );
   }
 }
-
 
 export default App;

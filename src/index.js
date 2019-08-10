@@ -1,17 +1,30 @@
-import React, {Component} from "react";
-import {render} from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
-import AppRoutes from "./Routes";
-import {BrowserRouter as Router} from  "react-router-dom";
+import Edit from './components/Edit';
+import Create from './components/Create';
+import Show from './components/Show';
+import Alumno from './components/Alumno';
 
-render(
-<Router>
-	<AppRoutes/>
-</Router>
-,document.getElementById("root"));
+ReactDOM.render(
+  <Router>
+      <div>
+        <Route exact path='/' component={App} />
+        <Route path='/edit/:id' component={Edit} />
+        <Route path='/create' component={Create} />
+        <Route path='/show/:id' component={Show} />
+        <Route path='/alumno/:id' component={Alumno} />
+        
+      </div>
+  </Router>,
+  document.getElementById('root')
+);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+// Si desea que su aplicación funcione sin conexión y se cargue más rápido, puede cambiar
+// anular el registro () para registrar () a continuación. Tenga en cuenta que esto viene con algunas trampas.
+// Obtenga más información sobre los trabajadores de servicios: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
