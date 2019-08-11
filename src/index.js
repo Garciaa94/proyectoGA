@@ -8,7 +8,9 @@ import * as serviceWorker from './serviceWorker';
 import Edit from './components/Edit';
 import Create from './components/Create';
 import Show from './components/Show';
-import Alumno from './components/Alumno';
+import Alumno from './roles/Alumno';
+import Docente from './roles/Docente';
+import Admin from './roles/Admin';
 
 ReactDOM.render(
   <Router>
@@ -17,7 +19,9 @@ ReactDOM.render(
         <Route path='/edit/:id' component={Edit} />
         <Route path='/create' component={Create} />
         <Route path='/show/:id' component={Show} />
-        <Route path='/alumno/:id' component={Alumno} />
+        <Route path='/alumno' component={Alumno} />
+        <Route path='/docente' component={Docente} />
+        <Route path='/admin' component={Admin} />
         
       </div>
   </Router>,

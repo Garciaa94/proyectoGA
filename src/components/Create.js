@@ -37,7 +37,8 @@ class Create extends Component {
       this.setState({
         title: '',
         description: '',
-        hora: '',
+        horai: '',
+        horaf: '',
         author: ''
       });
       this.props.history.push("/")
@@ -48,7 +49,7 @@ class Create extends Component {
   }
 
   render() {
-    const { title, description,hora, author } = this.state;
+    const { title, description,horai,horaf, author } = this.state;
     return (
       <div class="container">
         <div class="panel panel-default">

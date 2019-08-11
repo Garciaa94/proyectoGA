@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import firebase from '../Firebase';
 import { Link } from 'react-router-dom';
-import './App.css';
-import firebase from './Firebase';
+import '../roles/VistaRoles.css';
 
 class App extends Component {
   constructor(props) {
@@ -48,8 +49,8 @@ class App extends Component {
             </h3>
             <h4><Link to="/alumno" class="btn btn-alumno"> Alumno </Link></h4> 
             
-            <h4><Link to="/docente" class="btn btn-Docente"> Docente </Link></h4> 
-            <h4><Link to="/admin" class="btn btn-Admin"> Administrador </Link></h4> 
+            <h4><Link to="/Docente" class="btn btn-Docente"> Docente </Link></h4> 
+            <h4><Link to="/Administrador" class="btn btn-Administrador"> Administrador </Link></h4> 
           </div>
 
 
@@ -59,6 +60,8 @@ class App extends Component {
             </h3>
           </div>
           <div class="panel-body">
+            <h4 class="panel-Salir"><Link to="/" class="btn btn-primary">Salir</Link></h4>
+            <h4><Link to="/create" class="btn btn-primary">Add Board</Link></h4>
             <table class="table table-stripe">
               <thead>
                 <tr>
@@ -72,7 +75,7 @@ class App extends Component {
               <tbody>
                 {this.state.boards.map(board =>
                   <tr>
-                    <td>{board.title}</td>
+                    <td><Link to={`/show/${board.key}`}>{board.title}</Link></td>
                     <td>{board.description}</td>
                     <td>{board.horai}</td>
                     <td>{board.horaf}</td>
@@ -82,6 +85,10 @@ class App extends Component {
               </tbody>
             </table>
           </div>
+          <div class="mod-lab">
+              click en el nombre del laboratorio para modificar
+          </div>
+
         </div>
       </div>
     );

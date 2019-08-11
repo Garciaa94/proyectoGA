@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import firebase from '../Firebase';
 import { Link } from 'react-router-dom';
-import './App.css';
-import firebase from './Firebase';
+import '../roles/VistaRoles.css';
 
-class App extends Component {
+class Docente extends Component {
   constructor(props) {
     super(props);
     this.ref = firebase.firestore().collection('boards');
@@ -41,24 +42,16 @@ class App extends Component {
            
       <div class="container">
         <div class="panel panel-default">
-        <div class="Menulist">
-            <h3 class="listm">
-              Graficacion y Animacion<br></br>
-              Menu<br></br>
-            </h3>
-            <h4><Link to="/alumno" class="btn btn-alumno"> Alumno </Link></h4> 
-            
-            <h4><Link to="/docente" class="btn btn-Docente"> Docente </Link></h4> 
-            <h4><Link to="/admin" class="btn btn-Admin"> Administrador </Link></h4> 
-          </div>
-
-
           <div class="panel-heading">
             <h3 class="panel-title">
-              Vista General 
+              Vista Docente
             </h3>
           </div>
           <div class="panel-body">
+          <h4 class="panel-Salir"><Link to="/" class="btn btn-primary">Salir</Link></h4>
+            <div class="menu-doc">
+            <h4><Link to="/create" class="btn btn-primary">Reservar laboratorio</Link></h4>
+            </div>
             <table class="table table-stripe">
               <thead>
                 <tr>
@@ -88,4 +81,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Docente;
