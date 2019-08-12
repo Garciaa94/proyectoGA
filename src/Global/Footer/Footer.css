@@ -1,0 +1,20 @@
+.Footer {
+	margin: 0 auto;
+	text-align: center;
+	width: 90%;
+}
+
+.row1 {
+	text-align: center;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:120px;
+	width:100%;
+	background:black;
+	padding-right: 30px;
+}
+
+.proyecto{
+	color: blanchedalmond
+}
