@@ -13,6 +13,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-social-icons": "^4.1.0",
+    "react-web-ar": "^1.0.0-beta2",
     "reactstrap": "^8.0.1",
     "sweetalert2": "^8.15.3"
   },
