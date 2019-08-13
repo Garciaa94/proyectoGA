@@ -12,6 +12,8 @@ import Alumno from './roles/Alumno';
 import Docente from './roles/Docente';
 import Admin from './roles/Admin';
 import Login from './components/Login';
+import ReactArApp from './components/ReactArApp';
+
 
 ReactDOM.render(
   <Router>
@@ -24,6 +26,8 @@ ReactDOM.render(
         <Route path='/docente' component={Docente} />
         <Route path='/admin' component={Admin} />
         <Router path='/login' component={Login}/>
+        <Route path='/Arjs' component={ReactArApp}/>
+        
       </div>
   </Router>,
   document.getElementById('root')
