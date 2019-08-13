@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {  Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-//import fire from '../../config/fire';
-import fire from  './config/fire';
+import firebase from '../Firebase';
 	class Login extends Component{
 		constructor(props){
 			super(props);
@@ -13,7 +12,7 @@ import fire from  './config/fire';
 		}
 		login(e){
 			e.preventDefault();
-			fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+			firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
 			}).catch((error)=>{
 				console.log(error);
 			});
@@ -23,7 +22,8 @@ import fire from  './config/fire';
 		}
 		render(){
 			return(
-				<div className='Login'>
+        
+		<div className='Login'>
 		<Container className="App">
         <h2>Iniciar</h2>
         <Form className="form">

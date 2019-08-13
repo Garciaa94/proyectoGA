@@ -46,10 +46,12 @@ class App extends Component {
               Graficacion y Animacion<br></br>
               Menu<br></br>
             </h3>
-            <h4><Link to="/alumno" class="btn btn-alumno"> Alumno </Link></h4> 
-            <h4><Link to="/login" class="btn btn-login"> logear </Link></h4> 
+            <h4><Link to="/alumno" class="btn btn-Alumno"> Alumno </Link></h4> 
             <h4><Link to="/docente" class="btn btn-Docente"> Docente </Link></h4> 
-            <h4><Link to="/admin" class="btn btn-Admin"> Administrador </Link></h4> 
+            <h4><Link to="/admin" class="btn btn-Admin"> Administrador </Link></h4>
+
+
+            <h4><Link to="/login" class="btn btn-Login"> Login </Link></h4>  
           </div>
 
 

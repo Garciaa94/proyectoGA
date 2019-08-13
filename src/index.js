@@ -11,7 +11,7 @@ import Show from './components/Show';
 import Alumno from './roles/Alumno';
 import Docente from './roles/Docente';
 import Admin from './roles/Admin';
-//import Login from './components/Login/Login';
+import Login from './components/Login';
 
 ReactDOM.render(
   <Router>
@@ -23,8 +23,7 @@ ReactDOM.render(
         <Route path='/alumno' component={Alumno} />
         <Route path='/docente' component={Docente} />
         <Route path='/admin' component={Admin} />
-      
-        
+        <Router path='/login' component={Login}/>
       </div>
   </Router>,
   document.getElementById('root')

@@ -2,16 +2,15 @@ import ReactDOM from 'react-dom';
 import firebase from 'firebase';
 
 const config = {
-  apiKey: "AIzaSyA8P1vIDrNayDTsVKl-NmjcERS2E-mmrN8",
-  authDomain: "bdreact-140d1.firebaseapp.com",
-  databaseURL: "https://bdreact-140d1.firebaseio.com",
-  projectId: "bdreact-140d1",
-  storageBucket: "bdreact-140d1.appspot.com",
-  messagingSenderId: "229870074618",
-  appId: "1:229870074618:web:0640db75bfd39309"
+  apiKey: "AIzaSyAdhxWxdAtilVPfofVhJRuedahqIDU3028",
+  authDomain: "pruebabd-ae6a1.firebaseapp.com",
+  databaseURL: "https://pruebabd-ae6a1.firebaseio.com",
+  projectId: "pruebabd-ae6a1",
+  storageBucket: "pruebabd-ae6a1.appspot.com",
+  messagingSenderId: "448776334009",
+  appId: "1:448776334009:web:d461d85ef426f86b"
   
-};
-
-const database = firebase.database().ref('/posts');
+}; 
+const database = firebase.database().ref('/admin');
 
 export default database;
