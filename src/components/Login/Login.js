@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {  Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-import fire from '../../config/fire';
+//import fire from '../../config/fire';
+import fire from  './config/fire';
 	class Login extends Component{
 		constructor(props){
 			super(props);
