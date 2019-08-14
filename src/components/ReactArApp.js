@@ -1,4 +1,4 @@
-//import 'aframe';
+/* //import 'aframe';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Box, Sphere, Cylinder, Plane, Sky, Text, Scene} from 'react-aframe-ar';
@@ -20,3 +20,4 @@ class ReactArApp extends React.Component {
  
 ReactDOM.render(<ReactArApp/>, document.querySelector('#sceneContainer'));
 export default ReactArApp;
+*/
