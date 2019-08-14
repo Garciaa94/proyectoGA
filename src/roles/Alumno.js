@@ -49,6 +49,7 @@ class App extends Component {
           </div>
           <div class="panel-body">
           <h4 class="panel-Salir"><Link to="/" class="btn btn-primary">Salir</Link></h4>
+          <h4><Link to="/cam" class="btn btn-primary"> Camara </Link></h4>
             <table class="table table-stripe">
               <thead>
                 <tr>

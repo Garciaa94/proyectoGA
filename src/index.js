@@ -14,7 +14,7 @@ import Admin from './roles/Admin';
 import Login from './components/Login';
 //import  Ar from './components/Ar';
 //import ReactArApp from './components/ReactArApp';
-import Camara from './components/Camara';
+import webcant from './components/webcant';
 ReactDOM.render(
   <Router>
       <div>
@@ -26,9 +26,11 @@ ReactDOM.render(
         <Route path='/docente' component={Docente} />
         <Route path='/admin' component={Admin} />
         <Route path='/login' component={Login}/>
+        < Route path='/cam' component= {webcant}/>
+
+
         {/*<Route path='/arjs' component={ReactArApp}/>*/} 
         {/*<Route path='/arjs' component={Ar}/>*/}
-        < Route path='/arjs' component= {Camara}/>
         
       </div>
   </Router>,
