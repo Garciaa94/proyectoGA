@@ -1,8 +1,12 @@
-/* //import 'aframe';
+ /* import 'aframe';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Box, Sphere, Cylinder, Plane, Sky, Text, Scene} from 'react-aframe-ar';
- 
+import Lab1 from './marcadores/Lab1/';
+import Lab1 from './marcadores/Lab1/';
+import Lab2 from './marcadores/Lab2/';
+import Lab3 from './marcadores/Lab2/';
+
 class ReactArApp extends React.Component {
   render () {
     return (
