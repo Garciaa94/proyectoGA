@@ -25,8 +25,8 @@ ReactDOM.render(
         <Route path='/alumno' component={Alumno} />
         <Route path='/docente' component={Docente} />
         <Route path='/admin' component={Admin} />
-        <Router path='/login' component={Login}/>
-        <Route path='/Arjs' component={ReactArApp}/>
+        <Route path='/login' component={Login}/>
+        <Route path='/arjs' component={ReactArApp}/>
         
       </div>
   </Router>,
