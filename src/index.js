@@ -12,7 +12,8 @@ import Alumno from './roles/Alumno';
 import Docente from './roles/Docente';
 import Admin from './roles/Admin';
 import Login from './components/Login';
-import ReactArApp from './components/ReactArApp';
+//import  Ar from './components/Ar';
+//import ReactArApp from './components/ReactArApp';
 
 
 ReactDOM.render(
@@ -27,6 +28,8 @@ ReactDOM.render(
         <Route path='/admin' component={Admin} />
         <Route path='/login' component={Login}/>
         {/*<Route path='/arjs' component={ReactArApp}/>*/} 
+        {/*<Route path='/arjs' component={Ar}/>*/}
+
         
       </div>
   </Router>,
