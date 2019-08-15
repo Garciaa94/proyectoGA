@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {  Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-import firebase from '../Firebase';
+//import firebase from '../Firebase';
+import firebase from '../../Firebase';
 	class Login extends Component{
 		constructor(props){
 			super(props);
@@ -8,7 +9,7 @@ import firebase from '../Firebase';
 			this.handleChange = this.handleChange.bind(this);
 			this.state ={
 				email:'', password:''
-			}
+			} 
 		}
 		login(e){
 			e.preventDefault();
