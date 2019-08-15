@@ -3,20 +3,20 @@ import {  Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstr
 //import fire from '../../config/fire';
 import fire from '../../Firebase';
 import './Login.css';
-import Footer from '../../Global/Footer/Footer';
+//import Footer from '../../Global/Footer/Footer';
 	class Login extends Component{
 		constructor(props){
-			super(props);
-			this.login=this.login.bind(this);
-			this.handleChange = this.handleChange.bind(this);
+			super(props);  
+			this.login=this.login.bind(this); // coneccion a la base de datos 
+			this.handleChange = this.handleChange.bind(this);    
 			this.state ={
-				email:'', password:''
+				email:'', password:'' // validacion del usuario y contraseña para la coneccion de la base de datos
 			}
 		}
 		login(e){
 			e.preventDefault();
 			fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-			}).catch((error)=>{
+			}).catch((error)=>{  //  control de errores de la coneccion de la base de datos
 				console.log(error);
 			});
 		}
@@ -24,7 +24,7 @@ import Footer from '../../Global/Footer/Footer';
 			this.setState({ [e.target.name]: e.target.value});
 		}
 		render(){
-			return(
+			return(   // vista del login 
 		<div className='Login'>
 		<Container className="App">
         <h2>Iniciar</h2>
@@ -38,7 +38,7 @@ import Footer from '../../Global/Footer/Footer';
                 id="exampleEmail"
                 value={this.state.email}
                 onChange={this.handleChange}
-                placeholder="email@email.com"
+                placeholder="email@email.com" // vista del ejemplo a ingresar en el login
               />
             </FormGroup>
           </Col>
@@ -51,14 +51,12 @@ import Footer from '../../Global/Footer/Footer';
                 id="examplePassword"
                 value={this.state.password}
                 onChange={this.handleChange}
-                placeholder="********"
+                placeholder="********" // vista del tipo de dato en el login
               />
             </FormGroup>
           </Col>
           <Button onClick={this.login}>Iniciar</Button><br/><br/>
-          <div className="App-footer">
-        <Footer/>
-        </div>
+         
         </Form>
       </Container>
       </div>

@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-	
+	// vista de los componentes que estamos usando en el proyecto reactt
 	class About extends Component{
 		render(){
 			return(
 				<div className="About">
-				<blockquote className="blockquote">
-				<p className="mb-0"> Este proyecto fue realizado con reactjs + redux y conectado a una base de datos noSQL (FIREBASE) </p>
+				<blockquote className="blockquote"> 
+				<p className="mb-0"> Este proyecto fue realizado con reactjs + conectado a una base de datos noSQL (FIREBASE) </p>
 				<footer className="blockquote-footer">Dependencias necesarias e instaladas</footer>
 				<ul className="list-unstyled">
 				<li>redux</li>

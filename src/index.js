@@ -15,6 +15,7 @@ import Login from './components/Login/Login';
 //import  Ar from './components/Ar';
 //import ReactArApp from './components/ReactArApp';
 import webcant from './components/webcant';
+import Footer from '../src/Global/Footer/Footer';
 ReactDOM.render(
   <Router>
       <div>
@@ -33,6 +34,9 @@ ReactDOM.render(
         {/*<Route path='/arjs' component={Ar}/>*/}
         
       </div>
+      <div className="App-footer">
+        <Footer/>
+        </div>
   </Router>,
   document.getElementById('root')
 );

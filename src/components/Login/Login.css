@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-image: url(../../fondo/mar.jpg);
+
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+    padding: 20px;
 }

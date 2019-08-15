@@ -7,6 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(167, 201, 221);
+  background-image: url(../src/fondo/mar.jpg);
 }
 
 code {
