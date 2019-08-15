@@ -3,6 +3,7 @@ import {  Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstr
 //import fire from '../../config/fire';
 import fire from '../../Firebase';
 import './Login.css';
+import Footer from '../../Global/Footer/Footer';
 	class Login extends Component{
 		constructor(props){
 			super(props);
@@ -55,9 +56,13 @@ import './Login.css';
             </FormGroup>
           </Col>
           <Button onClick={this.login}>Iniciar</Button><br/><br/>
+          <div className="App-footer">
+        <Footer/>
+        </div>
         </Form>
       </Container>
       </div>
+      
 				);
 	}
 }
