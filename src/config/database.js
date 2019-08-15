@@ -9,8 +9,7 @@ const config = {
   storageBucket: "pruebabd-ae6a1.appspot.com",
   messagingSenderId: "448776334009",
   appId: "1:448776334009:web:d461d85ef426f86b"
-  
-}; 
+};
 const database = firebase.database().ref('/admin');
 
 export default database;

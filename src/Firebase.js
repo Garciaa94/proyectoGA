@@ -11,6 +11,7 @@ const config = {
   storageBucket: "bdreact-140d1.appspot.com",
   messagingSenderId: "229870074618",
   appId: "1:229870074618:web:0640db75bfd39309"
+  
 };
 firebase.initializeApp(config);
 

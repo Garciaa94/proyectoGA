@@ -11,7 +11,7 @@ import Show from './components/Show';
 import Alumno from './roles/Alumno';
 import Docente from './roles/Docente';
 import Admin from './roles/Admin';
-import Login from './components/Login';
+import Login from './components/Login/Login';
 //import  Ar from './components/Ar';
 //import ReactArApp from './components/ReactArApp';
 import webcant from './components/webcant';
