@@ -62,8 +62,8 @@ class Edit extends Component {
         horaf:'',
         author: ''
       });
-      this.props.history.push("/show/"+this.props.match.params.id)
-    })
+      this.props.history.push("/show/"+this.props.match.params.id)  // envia a la pagina principal para visualizar datos
+    })                                                //en la cual es el rol del administrador
     .catch((error) => {
       console.error("Error adding document: ", error);
     });

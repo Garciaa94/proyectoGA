@@ -26,6 +26,8 @@ import React, {Component} from "react";
 				<li>babel-preset-stage-2</li>
 				<li>webpack</li>
 				<li>webpack-dev-server</li>
+				<li>aframe-ar</li>
+				<li>react-web-ar</li>
 				</ul>
 				</blockquote>
 				</div>
