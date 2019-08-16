@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {  Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 //import fire from '../../config/fire';
 import fire from '../../Firebase';
 import './Login.css';
@@ -55,10 +56,20 @@ import './Login.css';
               />
             </FormGroup>
           </Col>
-          <Button onClick={this.login}>Iniciar</Button><br/><br/>
+          <div className="button">
+          <Button  onClick={this.login}>Iniciar</Button> 
+          <Button ><Link to="/">Salir</Link></Button>
+          </div>
+         
+          
+          <br/><br/>
          
         </Form>
       </Container>
+      <div className="fin-login">
+
+
+      </div>
       </div>
       
 				);

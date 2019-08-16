@@ -1,10 +1,21 @@
 .Login{
-    display: flex;
+    display: 40px;
     align-items: center;
     justify-content: center;
-
     height: 320px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
-    padding: 20px;
+    padding: 40px;
 }
+
+.App{
+
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+     
+}
+.button{ margin: 13px 12px 12px 10px;
+
+    
+} 
+
+button{ margin: 13px; } 
